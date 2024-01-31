@@ -53,6 +53,7 @@ void my_print_tree(int cur_ind)
 if(cur_ind==-1) return;
 if(syn_tree[cur_ind].lc==-1&&syn_tree[cur_ind].rc==-1)
 printf("Digit Node -> Index : %d, Value : %s\n",cur_ind,syn_tree[cur_ind].val); else
-printf("Operator Node -> Index : %d, Value : %s, Left Child Index : %d,Right Child Index : %d  \n",cur_ind,syn_tree[cur_ind].val, syn_tree[cur_ind].lc,syn_tree[cur_ind].rc); my_print_tree(syn_tree[cur_ind].lc);
+printf("Operator Node -> Index : %d, Value : %s, Left Child Index : %d,Right Child Index : %d  \n",cur_ind,syn_tree[cur_ind].val, syn_tree[cur_ind].lc,syn_tree[cur_ind].rc);
+my_print_tree(syn_tree[cur_ind].lc);
 my_print_tree(syn_tree[cur_ind].rc);
 }
